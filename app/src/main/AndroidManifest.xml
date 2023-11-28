@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyApplication1"
         tools:targetApi="34">
         <activity
+            android:name=".TextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".Log_InActivity"
             android:exported="true">
             <intent-filter>

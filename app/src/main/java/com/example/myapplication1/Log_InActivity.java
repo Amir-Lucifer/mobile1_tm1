@@ -2,6 +2,7 @@ package com.example.myapplication1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,13 +24,14 @@ public class Log_InActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (username.getText().toString().equals("admin")&&password.getText().toString().equals("1234")){
-                    Toast.makeText(Log_InActivity.this, "Welcome Admin!", Toast.LENGTH_SHORT).show();
-                } else if (username.getText().toString().equals("amir")&&password.getText().toString().equals("0000")) {
-                    Toast.makeText(Log_InActivity.this, "Welcome Amir!", Toast.LENGTH_SHORT).show();
+                    Intent i=new Intent(Log_InActivity.this,CalculatorActivity.class);
+                    startActivity(i);
+                } else if (username.getText().toString().equals("")&&password.getText().toString().equals("")) {
+                    Toast.makeText(Log_InActivity.this, "fill in the blanks", Toast.LENGTH_SHORT).show();
 
                 } else if (username.getText().toString().equals("ali")&&password.getText().toString().equals("1100")) {
-                    Toast.makeText(Log_InActivity.this, "Welcome Ali!", Toast.LENGTH_SHORT).show();
-
+                   Intent h = new Intent(Log_InActivity.this,TextActivity.class);
+                   startActivity(h);
                 }else{
                     Toast.makeText(Log_InActivity.this, "USERNAME OR PASSWORD ISNOT CORRECT", Toast.LENGTH_SHORT).show();
                 }
